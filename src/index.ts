@@ -7,4 +7,14 @@ function axios(config: AxiosRequestConfig): void {
   xhr(config)
 }
 
+// 发送config到xhr(config)之前, 需要对config处理
+function processConfig(config: AxiosRequestConfig): void {
+  // 转化url
+  config.url = transformURL(config)
+}
+
+function transformURL(config: AxiosRequestConfig): string {
+
+}
+
 export default axios
